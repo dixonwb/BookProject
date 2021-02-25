@@ -30,6 +30,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "Les Miserables",
+                        NumPages = 1488,
                         AuthorFirst = "Victor",
                         AuthorLast = "Hugo",
                         Publisher = "Signet",
@@ -42,6 +43,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "Team of Rivals",
+                        NumPages = 944,
                         AuthorFirst = "Doris",
                         AuthorLast = "Kearns Goodwin",
                         Publisher = "Simon & Schuster",
@@ -54,6 +56,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "The Snowball",
+                        NumPages = 832,
                         AuthorFirst = "Alice",
                         AuthorLast = "Schroeder",
                         Publisher = "Bantam",
@@ -66,6 +69,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "American Ulysses",
+                        NumPages = 864,
                         AuthorFirst = "Ronald",
                         AuthorLast = "C. White",
                         Publisher = "Random House",
@@ -78,6 +82,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "Unbroken",
+                        NumPages = 528,
                         AuthorFirst = "Laura",
                         AuthorLast = "Hillenbrand",
                         Publisher = "Random House",
@@ -90,6 +95,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "The Great Train Robbery",
+                        NumPages = 288,
                         AuthorFirst = "Michael",
                         AuthorLast = "Crichton",
                         Publisher = "Vintage",
@@ -102,6 +108,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "Deep Work",
+                        NumPages = 304,
                         AuthorFirst = "Cal",
                         AuthorLast = "Newport",
                         Publisher = "Grand Central Publishing",
@@ -114,6 +121,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "It's Your Ship",
+                        NumPages = 240,
                         AuthorFirst = "Michael",
                         AuthorLast = "Abrashoff",
                         Publisher = "Grand Central Publishing",
@@ -126,6 +134,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "The Virgin Way",
+                        NumPages = 400,
                         AuthorFirst = "Richard",
                         AuthorLast = "Branson",
                         Publisher = "Portfolio",
@@ -138,6 +147,7 @@ namespace BookProject.Models
                     new Book
                     {
                         Title = "Sycamore Row",
+                        NumPages = 642,
                         AuthorFirst = "John",
                         AuthorLast = "Grisham",
                         Publisher = "Bantam",
@@ -145,6 +155,46 @@ namespace BookProject.Models
                         Fiction = true,
                         Category = "Thrillers",
                         Price = 15.03
+                    },
+
+                    new Book
+                    {
+                        Title = "To Kill A Mockingbird",
+                        NumPages = 281,
+                        AuthorFirst = "Harper",
+                        AuthorLast = "Lee",
+                        Publisher = "J.B. Lippincott & Co.",
+                        ISBN = "953-1078643217",
+                        Fiction = true,
+                        Category = "Historical Fiction",
+                        Price = 15.99
+                    },
+
+                    new Book
+                    {
+                        Title = "All Quiet on the Western Front",
+                        NumPages = 200,
+                        AuthorFirst = "Erich",
+                        AuthorLast = "Remarque",
+                        Publisher = "Ullstein Verlag",
+                        ISBN = "978-5533689125",
+                        Fiction = true,
+                        Category = "Historical Fiction",
+                        Price = 5.93
+                    },
+
+
+                    new Book
+                    {
+                        Title = "Harry Potter and the Sorcerer's Stone",
+                        NumPages = 223,
+                        AuthorFirst = "J.K.",
+                        AuthorLast = "Rowling",
+                        Publisher = "Scholastic Corporation",
+                        ISBN = "962-8097536411",
+                        Fiction = true,
+                        Category = "Fantasy",
+                        Price = 6.98
                     }
                 );
 

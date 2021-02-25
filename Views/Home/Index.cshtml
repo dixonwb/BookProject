@@ -2,46 +2,70 @@
     ViewData["Title"] = "Home Page";
 }
 <!-- Bring in the model that we are going to use -->
-@model IQueryable<Book>
+<!-- model IQueryable<Book> -->
+@model BookListViewModel
 
 <!-- Give an appropriate title -->
-<header style="text-align:center">
+<br />
+<header class="text-center display-2" style="color:royalblue">
     <h1>Welcome to Will's Online Bookstore!</h1>
 </header>
 <br />
 
 <!-- For the bootstrap, I played around with several table stylings, I like the table-hover best-->
-<div>
+<div class="p-5">
     <table class="table table-hover">
-        <thead> <!-- Column titles-->
+        <!-- ******** NEW BOOTSTRAP FOR ASSIGNMENT 6 *********-->
+        <thead class="thead-dark">
+            <!-- This is something new for assignment 6, let's use a dark table header-->
+            <!-- Column titles-->
             <tr class="font-weight-bold">
-                <th style="color:blue">BookID</th>
-                <th style="color:blue">Title</th>
-                <th style="color:blue">Author First Name</th>
-                <th style="color:blue">Author Last Name</th>
-                <th style="color:blue">Publisher</th>
-                <th style="color:blue">ISBN</th>
-                <th style="color:blue">Fiction</th>
-                <th style="color:blue">Category</th>
-                <th style="color:blue">Price</th>
+                <th style="color:whitesmoke">BookID</th>
+                <th style="color:whitesmoke">Title</th>
+                <th style="color:whitesmoke">Number of Pages</th>
+                <th style="color:whitesmoke">Author First Name</th>
+                <th style="color:whitesmoke">Author Last Name</th>
+                <th style="color:whitesmoke">Publisher</th>
+                <th style="color:whitesmoke">ISBN</th>
+                <th style="color:whitesmoke">Fiction</th>
+                <th style="color:whitesmoke">Category</th>
+                <th style="color:whitesmoke">Price</th>
             </tr>
         </thead>
         <tbody>
             <!-- Loop through and list each property for each Book object using a for loop in Razor code -->
-            @foreach (var x in Model)
+            @foreach (var x in Model.Books)
             {
-            <tr>
-                <td>@x.BookID</td>
-                <td>@x.Title</td>
-                <td>@x.AuthorFirst</td>
-                <td>@x.AuthorLast</td>
-                <td>@x.Publisher</td>
-                <td>@x.ISBN</td>
-                <td>@x.Fiction</td>
-                <td>@x.Category</td>
-                <td>$@x.Price</td>
-            </tr>
+                <tr>
+                    <td>@x.BookID</td>
+                    <td>@x.Title</td>
+                    <td>@x.NumPages</td>
+                    <td>@x.AuthorFirst</td>
+                    <td>@x.AuthorLast</td>
+                    <td>@x.Publisher</td>
+                    <td>@x.ISBN</td>
+                    <td>@x.Fiction</td>
+                    <td>@x.Category</td>
+                    <td>$@x.Price</td>
+                </tr>
             }
         </tbody>
     </table>
-</div><br />
+</div>
+
+<!-- ******** NEW BOOTSTRAP FOR ASSIGNMENT 6 *********-->
+<!--To practice our bootstrap, let's add a blockquote and use some different classes (blockquote class)-->
+<div style="padding-left: 200px;">
+    <blockquote class="blockquote text-left">
+        <p class="small font font-weight-bold">Reading is to the mind what exercise is to the body.</p>
+        <footer class="blockquote-footer font-weight-bolder"><cite title="Source Title">Joseph Addison</cite></footer>
+    </blockquote>
+</div>
+
+<div class="text-right m-5">
+    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
+         class="btn-group" role="group">
+    </div>
+</div>
+

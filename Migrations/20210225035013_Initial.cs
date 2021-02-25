@@ -13,6 +13,7 @@ namespace BookProject.Migrations
                     BookID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: false),
+                    NumPages = table.Column<int>(nullable: false),
                     AuthorFirst = table.Column<string>(nullable: false),
                     AuthorLast = table.Column<string>(nullable: false),
                     Publisher = table.Column<string>(nullable: false),

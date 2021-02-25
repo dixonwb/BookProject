@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BookProject.Models.ViewModels;
 
 namespace BookProject.Controllers
 {
@@ -15,6 +16,8 @@ namespace BookProject.Controllers
 
         private IBookRepository _repository;
 
+        public int PageSize = 5;
+
         // We want the HomeController to receive the repository in addition to the logger
         public HomeController(ILogger<HomeController> logger, IBookRepository repository)
         {
@@ -23,9 +26,21 @@ namespace BookProject.Controllers
             _repository = repository; // Assign private repository to public repository
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            return View(_repository.Books); // With the view, we will also pass the repository
+            return View(new BookListViewModel
+            {
+                Books = _repository.Books // all this info will be used to determine how many books to display per page and how many pages are necessary
+                    .OrderBy(b => b.BookID)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Books.Count()
+                }
+            });
         }
 
         public IActionResult Privacy()

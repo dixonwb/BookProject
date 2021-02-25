@@ -13,6 +13,8 @@ namespace BookProject.Models
         [Required]
         public string Title { get; set; }
         [Required]
+        public int NumPages { get; set; } // We want to add the number of pages
+        [Required]
         public string AuthorFirst { get; set; }
         [Required]
         public string AuthorLast { get; set; }

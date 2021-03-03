@@ -13,5 +13,7 @@ namespace BookProject.Models.ViewModels
         // BookListViewModel to Index.cshtml, then we solve our problem
         public IEnumerable<Book> Books { get; set; }
         public PagingInfo PagingInfo { get; set; }
+
+        public string CurrentCategory { get; set; } // this variable will be used for the category navigation
     }
 }

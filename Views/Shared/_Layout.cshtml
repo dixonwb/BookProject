@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div>
-        @RenderBody() <!-- Render the Body to display the main part of each page -->
+
+    <div class="row m-1">
+        <div class="col-2">
+            <!--This ViewComponent menu on the left side will have a category menu-->
+            <vc:navigation-menu />
+        </div>
+        <div class="col-10">
+            @RenderBody() <!-- Render the Body to display the main part of each page -->
+        </div>
     </div>
-    <div>
-        <!-- An appropriate footer -->
-        <!-- ******** NEW BOOTSTRAP FOR ASSIGNMENT 6 *********-->
-    <!-- Let's use the fixed-bottom class that I researched to ensure the copyright info stays at the bottom-->
-        <footer class="fixed-bottom text-center">
-            <p>Copyright Will's Bookstore 2021</p>
-        </footer>
-    </div>
+
 </body>
-
-
 </html>

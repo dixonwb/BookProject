@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+
+<!--This is the view that will be constructed for the viewcomponent menu on the left side
+    We want a home button that will list all the books-->
+<a class="btn btn-block btn-outline-secondary" asp-action="Index" asp-controller="Home"
+   asp-route-category="">Home</a><br /><br />
+
+
+<p class="text-center">Category</p>
+<!--We also want to list each category with a button using a for loop and some Razor code-->
+@foreach (string category in Model)
+{   <!--When a button is selected, we want it to appear different than the other buttons-->
+    <a class="btn btn-block btn-outline @(category == ViewBag.SelectedCategory ? "btn-primary" : "btn-outline-secondary")"
+       asp-action="Index" asp-controller="Home"
+       asp-route-category="@category"
+       asp-route-page="1">
+        @category
+    </a>
+}

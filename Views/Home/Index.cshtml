@@ -4,20 +4,15 @@
 <!-- Bring in the model that we are going to use -->
 <!-- model IQueryable<Book> -->
 @model BookListViewModel
-
 <!-- Give an appropriate title -->
-<br />
-<header class="text-center display-2" style="color:royalblue">
-    <h1>Welcome to Will's Online Bookstore!</h1>
+<header class="text-center" style="color:royalblue">
+    <h2>Welcome to Will's Online Bookstore!</h2>
 </header>
-<br />
 
 <!-- For the bootstrap, I played around with several table stylings, I like the table-hover best-->
-<div class="p-5">
+<div class="px-5">
     <table class="table table-hover">
-        <!-- ******** NEW BOOTSTRAP FOR ASSIGNMENT 6 *********-->
         <thead class="thead-dark">
-            <!-- This is something new for assignment 6, let's use a dark table header-->
             <!-- Column titles-->
             <tr class="font-weight-bold">
                 <th style="color:whitesmoke">BookID</th>
@@ -55,17 +50,26 @@
 
 <!-- ******** NEW BOOTSTRAP FOR ASSIGNMENT 6 *********-->
 <!--To practice our bootstrap, let's add a blockquote and use some different classes (blockquote class)-->
-<div style="padding-left: 200px;">
-    <blockquote class="blockquote text-left">
-        <p class="small font font-weight-bold">Reading is to the mind what exercise is to the body.</p>
-        <footer class="blockquote-footer font-weight-bolder"><cite title="Source Title">Joseph Addison</cite></footer>
-    </blockquote>
-</div>
+<div class="row">
+    <div style="padding-left:65px" class="col-6">
+        <blockquote class="blockquote text-center rounded-pill" style="background-color:royalblue; color:white">
+            <p class="small font font-weight-bold">Reading is to the mind what exercise is to the body.</p>
+            <footer class="blockquote-footer font-weight-bolder" style="color:white"><cite title="Source Title" style="color:white">Joseph Addison</cite></footer>
+        </blockquote>
+    </div>
 
-<div class="text-right m-5">
-    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
-         page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
-         class="btn-group" role="group">
+
+<!--This column will just take up space because we do not want the pill that the quote is contained in 
+    to span the entire length of the screen-->
+    <div class="col-4"></div>
+
+<!--Here we will insert the pagination menu for when there are multiple pages-->
+    <div class=" col-2">
+        <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
+             page-url-category="@Model.CurrentCategory"
+             class="btn-group" role="group">
+        </div>
     </div>
 </div>
 

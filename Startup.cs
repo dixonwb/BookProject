@@ -63,17 +63,17 @@ namespace BookProject
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("categorypage", // category and page
-                    "{category}/{page:int}",
+                    "{category}/{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("justcategory", // just category
                     "{category}",
-                    new { Controller = "Home", action = "Index", page = 1 });
+                    new { Controller = "Home", action = "Index", pageNum = 1 });
 
 
                 endpoints.MapControllerRoute(
                     "pagination",
-                    "DisplayAll/{page}", // when not sorting by category, we will show DisplayAll/#
+                    "DisplayAll/{pageNum}", // when not sorting by category, we will show DisplayAll/#
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapDefaultControllerRoute();

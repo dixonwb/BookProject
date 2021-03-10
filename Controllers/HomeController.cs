@@ -26,18 +26,18 @@ namespace BookProject.Controllers
             _repository = repository; // Assign private repository to public repository
         }
 
-        public IActionResult Index(string category, int page = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             return View(new BookListViewModel
             {
                 Books = _repository.Books // all this info will be used to determine how many books to display per page and how many pages are necessary
                     .Where(b => category == null || b.Category == category)
                     .OrderBy(b => b.BookID)
-                    .Skip((page - 1) * PageSize)
+                    .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
                     // if the category is null (which means we are displaying all books), then count all books
                     // if there is a category selected, then just count the books with that category

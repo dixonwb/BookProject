@@ -10,7 +10,7 @@
 </header>
 
 <!-- For the bootstrap, I played around with several table stylings, I like the table-hover best-->
-<div class="px-5">
+<div class="px-4">
     <table class="table table-hover">
         <thead class="thead-dark">
             <!-- Column titles-->
@@ -42,6 +42,15 @@
                     <td>@x.Fiction</td>
                     <td>@x.Category</td>
                     <td>$@x.Price</td>
+                    <td>
+                        <form id="@x.BookID" asp-page="/Cart" method="post">
+                            <input type="hidden" asp-for="@x.BookID" />
+                            <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                            <span class="card-text">
+                                <button type="submit" class="btn-success btn-sm">Add to Cart</button>
+                            </span>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

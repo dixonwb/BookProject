@@ -32,7 +32,7 @@ namespace BookProject
             services.AddDbContext<bookDBcontext>(options => 
             {
                 // This connection string is what allows visual studio to connect with Microsoft SQl Server
-                options.UseSqlServer(Configuration["ConnectionStrings:BookStoreConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookStoreConnection"]);
             });
 
             services.AddScoped<IBookRepository, EFBookRepository>();

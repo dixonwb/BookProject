@@ -41,5 +41,15 @@ namespace BookProject.Pages
 
             return RedirectToPage(new { returnUrl = returnUrl });
         }
+
+        public IActionResult OnPostRemove(long BookID, string returnUrl)
+        {
+            Book book = repository.Books.FirstOrDefault(b => b.BookID == BookID);
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart.RemoveLine(book);
+            HttpContext.Session.SetJson("cart", Cart);
+            return RedirectToPage(new { returnUrl = returnUrl });
+        }
+
     }
 }

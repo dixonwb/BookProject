@@ -35,7 +35,7 @@ namespace BookProject.Models
                         AuthorLast = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Classic",
                         Price = 9.95M
                     },
@@ -48,7 +48,7 @@ namespace BookProject.Models
                         AuthorLast = "Kearns Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Biography",
                         Price = 14.58M
                     },
@@ -61,7 +61,7 @@ namespace BookProject.Models
                         AuthorLast = "Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Biography",
                         Price = 21.54M
                     },
@@ -74,7 +74,7 @@ namespace BookProject.Models
                         AuthorLast = "C. White",
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Biography",
                         Price = 11.61M
                     },
@@ -87,7 +87,7 @@ namespace BookProject.Models
                         AuthorLast = "Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Historical",
                         Price = 13.33M
                     },
@@ -100,7 +100,7 @@ namespace BookProject.Models
                         AuthorLast = "Crichton",
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Historical Fiction",
                         Price = 15.95M
                     },
@@ -113,7 +113,7 @@ namespace BookProject.Models
                         AuthorLast = "Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Self-Help",
                         Price = 14.99M
                     },
@@ -126,7 +126,7 @@ namespace BookProject.Models
                         AuthorLast = "Abrashoff",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Self-Help",
                         Price = 21.66M
                     },
@@ -139,7 +139,7 @@ namespace BookProject.Models
                         AuthorLast = "Branson",
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
-                        Fiction = "Non-Fiction",
+                        Fiction = false,
                         Category = "Business",
                         Price = 29.16M
                     },
@@ -152,7 +152,7 @@ namespace BookProject.Models
                         AuthorLast = "Grisham",
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Thrillers",
                         Price = 15.03M
                     },
@@ -165,7 +165,7 @@ namespace BookProject.Models
                         AuthorLast = "Lee",
                         Publisher = "J.B. Lippincott & Co.",
                         ISBN = "953-1078643217",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Historical Fiction",
                         Price = 15.99M
                     },
@@ -178,7 +178,7 @@ namespace BookProject.Models
                         AuthorLast = "Remarque",
                         Publisher = "Ullstein Verlag",
                         ISBN = "978-5533689125",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Historical Fiction",
                         Price = 5.93M
                     },
@@ -192,7 +192,7 @@ namespace BookProject.Models
                         AuthorLast = "Rowling",
                         Publisher = "Scholastic Corporation",
                         ISBN = "962-8097536411",
-                        Fiction = "Fiction",
+                        Fiction = true,
                         Category = "Fantasy",
                         Price = 6.98M
                     }

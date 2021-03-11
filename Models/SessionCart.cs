@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using BookProject.Infrastructure;
 
+// This class is required for the CartSummary across the navbar to funciton
+// It inherits from Cart class and essentially is a duplicate of Cart, but it overrides the methods
+
+
 namespace BookProject.Models
 {
     public class SessionCart : Cart

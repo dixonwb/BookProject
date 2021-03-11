@@ -26,7 +26,7 @@ namespace BookProject.Controllers
             _repository = repository; // Assign private repository to public repository
         }
 
-        public IActionResult Index(string category, int pageNum = 1)
+        public IActionResult Index(string category, int pageNum = 1) // change from page to pageNum because page is a special word in ASP.NET
         {
             return View(new BookListViewModel
             {

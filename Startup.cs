@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 // On this page, we need to set the connection string to the appropriate connection (see line 34)
+// We add several services in the Configure method
 
 namespace BookProject
 {
@@ -39,7 +40,7 @@ namespace BookProject
             services.AddScoped<IBookRepository, EFBookRepository>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
-            services.AddSession();
+            services.AddSession(); // We are going to need the session functionality in order to work with our cart
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }

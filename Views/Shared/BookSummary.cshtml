@@ -1,12 +1,13 @@
 ﻿@model Book
-
+<!-- This is handy because it is something that we will be using over and over again, so we can just package it up nicely if we want to use it somewhere else-->
+<!-- Right now, we are using it in index.cshtml-->
 <div class="card card-outline-secondary m-2 p-2">
     <div class="bg-faded p-1">
         <h4 class="font-weight-bold">
             @Model.Title
             <span class="badge badge-pill badge-secondary">$@Model.Price</span>
         </h4>
-        <ul style="list-style-type:none">
+        <ul style="list-style-type:none"> <!--After listing the Title and Price, List out other Book properties-->
             <li><span class="font-weight-bold">Author: </span>@Model.AuthorFirst @Model.AuthorLast</li>
             <li><span class="font-weight-bold">Publisher: </span>@Model.Publisher</li>
             <li><span class="font-weight-bold">ISBN: </span>@Model.ISBN</li>

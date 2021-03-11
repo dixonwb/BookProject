@@ -7,6 +7,8 @@ using BookProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+// ASP.Net automatically creates a class for us when we create a new Razor page
+
 namespace BookProject.Pages
 {
     public class CheckoutModel : PageModel

@@ -24,10 +24,10 @@ namespace BookProject.Models
         [RegularExpression(@"^?([0-9]{3})?[-.●]?([0-9]{10})$", ErrorMessage = "The ISBN field is not valid. You must use the format xxx-xxxxxxxxxx")]
         public string ISBN { get; set; }
         [Required]
-        public bool Fiction { get; set; } // If true, then the book is fiction
-        [Required]                         // If false, then the book is non-fiction
+        public string Fiction { get; set; } 
+        [Required]                         
         public string Category { get; set; }
         [Required]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

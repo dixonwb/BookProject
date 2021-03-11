@@ -5,4 +5,26 @@
 @{
 }
 
-<p>Testing</p>
+<h2>Your Cart</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td>@line.Book.Title</td>
+                <td>@line.Quantity</td>
+                <td>$@line.Book.Price</td>
+                <td>$@((line.Quantity * line.Book.Price).ToString())</td>
+            </tr>
+        }
+    </tbody>
+</table>

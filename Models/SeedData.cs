@@ -35,9 +35,9 @@ namespace BookProject.Models
                         AuthorLast = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95M
                     },
 
                     new Book
@@ -48,9 +48,9 @@ namespace BookProject.Models
                         AuthorLast = "Kearns Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58M
                     },
 
                     new Book
@@ -61,9 +61,9 @@ namespace BookProject.Models
                         AuthorLast = "Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54M
                     },
 
                     new Book
@@ -74,9 +74,9 @@ namespace BookProject.Models
                         AuthorLast = "C. White",
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61M
                     },
 
                     new Book
@@ -87,9 +87,9 @@ namespace BookProject.Models
                         AuthorLast = "Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33M
                     },
 
                     new Book
@@ -100,9 +100,9 @@ namespace BookProject.Models
                         AuthorLast = "Crichton",
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95M
                     },
 
                     new Book
@@ -113,9 +113,9 @@ namespace BookProject.Models
                         AuthorLast = "Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99M
                     },
 
                     new Book
@@ -126,9 +126,9 @@ namespace BookProject.Models
                         AuthorLast = "Abrashoff",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66M
                     },
 
                     new Book
@@ -139,9 +139,9 @@ namespace BookProject.Models
                         AuthorLast = "Branson",
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
-                        Fiction = false,
+                        Fiction = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16M
                     },
 
                     new Book
@@ -152,9 +152,9 @@ namespace BookProject.Models
                         AuthorLast = "Grisham",
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03M
                     },
 
                     new Book
@@ -165,9 +165,9 @@ namespace BookProject.Models
                         AuthorLast = "Lee",
                         Publisher = "J.B. Lippincott & Co.",
                         ISBN = "953-1078643217",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.99
+                        Price = 15.99M
                     },
 
                     new Book
@@ -178,9 +178,9 @@ namespace BookProject.Models
                         AuthorLast = "Remarque",
                         Publisher = "Ullstein Verlag",
                         ISBN = "978-5533689125",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 5.93
+                        Price = 5.93M
                     },
 
 
@@ -192,9 +192,9 @@ namespace BookProject.Models
                         AuthorLast = "Rowling",
                         Publisher = "Scholastic Corporation",
                         ISBN = "962-8097536411",
-                        Fiction = true,
+                        Fiction = "Fiction",
                         Category = "Fantasy",
-                        Price = 6.98
+                        Price = 6.98M
                     }
                 );
 

@@ -37,7 +37,7 @@ namespace BookProject.Models
                         ISBN = "978-0451419439",
                         Fiction = true,
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95M
                     },
 
                     new Book
@@ -50,7 +50,7 @@ namespace BookProject.Models
                         ISBN = "978-0743270755",
                         Fiction = false,
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58M
                     },
 
                     new Book
@@ -63,7 +63,7 @@ namespace BookProject.Models
                         ISBN = "978-0553384611",
                         Fiction = false,
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54M
                     },
 
                     new Book
@@ -76,7 +76,7 @@ namespace BookProject.Models
                         ISBN = "978-0812981254",
                         Fiction = false,
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61M
                     },
 
                     new Book
@@ -89,7 +89,7 @@ namespace BookProject.Models
                         ISBN = "978-0812974492",
                         Fiction = false,
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33M
                     },
 
                     new Book
@@ -102,7 +102,7 @@ namespace BookProject.Models
                         ISBN = "978-0804171281",
                         Fiction = true,
                         Category = "Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95M
                     },
 
                     new Book
@@ -115,7 +115,7 @@ namespace BookProject.Models
                         ISBN = "978-1455586691",
                         Fiction = false,
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99M
                     },
 
                     new Book
@@ -128,7 +128,7 @@ namespace BookProject.Models
                         ISBN = "978-1455523023",
                         Fiction = false,
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66M
                     },
 
                     new Book
@@ -141,7 +141,7 @@ namespace BookProject.Models
                         ISBN = "978-1591847984",
                         Fiction = false,
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16M
                     },
 
                     new Book
@@ -154,7 +154,7 @@ namespace BookProject.Models
                         ISBN = "978-0553393613",
                         Fiction = true,
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03M
                     },
 
                     new Book
@@ -167,7 +167,7 @@ namespace BookProject.Models
                         ISBN = "953-1078643217",
                         Fiction = true,
                         Category = "Historical Fiction",
-                        Price = 15.99
+                        Price = 15.99M
                     },
 
                     new Book
@@ -180,7 +180,7 @@ namespace BookProject.Models
                         ISBN = "978-5533689125",
                         Fiction = true,
                         Category = "Historical Fiction",
-                        Price = 5.93
+                        Price = 5.93M
                     },
 
 
@@ -194,7 +194,7 @@ namespace BookProject.Models
                         ISBN = "962-8097536411",
                         Fiction = true,
                         Category = "Fantasy",
-                        Price = 6.98
+                        Price = 6.98M
                     }
                 );
 

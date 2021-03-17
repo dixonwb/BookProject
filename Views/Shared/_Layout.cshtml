@@ -6,8 +6,22 @@
     <title>@ViewData["Title"] - BookProject</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" /> <!--In order to display the cart icon, we need to import a font library-->
 </head>
 <body>
+    <!-- This banner will show the site name across the top as well as the cart summary-->
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">WILL'S BOOKSTORE</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="row m-1">
         <div class="col-2">

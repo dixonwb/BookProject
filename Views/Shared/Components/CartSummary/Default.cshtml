@@ -1,0 +1,17 @@
+﻿@model Cart
+<!-- This is the cart summary view component across the top-->
+<!-- the info that we will include will be the number of items and the total price of those items-->
+
+<div class="">
+    @if (Model.Lines.Count() > 0)
+    {
+        <small class="navbar-text">
+            <b>Your Cart:</b>
+            @Model.Lines.Sum(x => x.Quantity) item(s)
+            @Model.ComputeTotalSum().ToString("c")
+        </small>
+    }
+    <a class="btn btn-sm btn-seconday navbar-btn" asp-page="/Checkout" asp-rout-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+</div>

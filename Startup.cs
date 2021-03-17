@@ -1,6 +1,7 @@
 using BookProject.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 // On this page, we need to set the connection string to the appropriate connection (see line 34)
+// We add several services in the Configure method
 
 namespace BookProject
 {
@@ -32,10 +34,15 @@ namespace BookProject
             services.AddDbContext<bookDBcontext>(options => 
             {
                 // This connection string is what allows visual studio to connect with Microsoft SQl Server
-                options.UseSqlServer(Configuration["ConnectionStrings:BookStoreConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookStoreConnection"]);
             });
 
             services.AddScoped<IBookRepository, EFBookRepository>();
+            services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession(); // We are going to need the session functionality in order to work with our cart
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +60,7 @@ namespace BookProject
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
@@ -61,20 +69,22 @@ namespace BookProject
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("categorypage", // category and page
-                    "{category}/{page:int}",
+                    "{category}/{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("justcategory", // just category
                     "{category}",
-                    new { Controller = "Home", action = "Index", page = 1 });
+                    new { Controller = "Home", action = "Index", pageNum = 1 });
 
 
                 endpoints.MapControllerRoute(
                     "pagination",
-                    "DisplayAll/{page}", // when not sorting by category, we will show DisplayAll/#
+                    "DisplayAll/{pageNum}", // when not sorting by category, we will show DisplayAll/#
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
             });
 
             SeedData.EnsurePopulated(app);

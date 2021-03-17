@@ -11,7 +11,7 @@ namespace BookProject.Migrations
                 columns: table => new
                 {
                     BookID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: false),
                     NumPages = table.Column<int>(nullable: false),
                     AuthorFirst = table.Column<string>(nullable: false),

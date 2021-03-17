@@ -1,0 +1,20 @@
+﻿
+<!-- This will be the shared layout for the cart Razor Page, which is different from a Razor View-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=content-width" />
+    <title>BookProject</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg-dark text-white p-2">
+        <span class="navbar-brand ml-2">BOOK PROJECT</span>
+    </div>
+    <div class="m-1 p-1">
+        @RenderBody()
+    </div>
+</body>
+</html>
